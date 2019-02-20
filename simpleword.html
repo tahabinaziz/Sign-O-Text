@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from layerdrops.com/sooper/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jan 2019 17:51:08 GMT -->
+<head>
+      <title>Sign-O-Text</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- favicon-->
+      <link rel="icon" type="image/png" sizes="32x32" href="image/log.png">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+   
+      <script src="face.js"></script>
+   </head>
+   <body>
+      <header class="navigation main-navigation">
+         <nav class="navbar navbar-custom navbar-fixed-top">
+            <div class="container text-center">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="web-app.html"><img src="image/new_logo.png" alt="logo"></a>
+               </div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav menu-left">
+                     <li class="dropdown active">
+                        <a  href="web-app.html">Home
+                      </a>
+                        
+                     </li>
+                     <li><a href="features.html">Features</a></li>
+                     <li><a href="productinfo.html">Product Info</a></li>
+                     <li><a href="simpleword.html">Simple Words</a></li>
+                     <li><a href="actionword.html">Action Words</a></li>
+                     
+                     
+                     <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right button-right">
+                     <li><a href="asldictionary.html">ASL Dictionary</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <div class="nav-pagination">
+            <div class="container">
+               <hr class="hraing">
+               <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                     <div class="sooper-text">
+                        <h3>Simple Words</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-6  col-sm-6 text-right nav-pagination1">
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li> -
+                        </li>
+                        <li>Simple Word </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+     
+
+     
+      <section class="feature new-feature">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="heading text-center wow animated slideInUp">
+                     <h3 style="color:black !important ">Deaf & Dump</h3>
+                     
+                  </div>
+                
+
+<div class="col-md-6">
+
+
+        <div class="banner-btn ">
+               
+                 <button class="btn btn-pink button6" onclick="detect_faces()">Text Generate</button>
+                 <button class="btn btn-blue button6" onclick="detect_faces()">Voice Generate</button>
+                
+             </div>
+
+
+            
+
+
+</div>
+
+
+
+
+<div class="col-md-6">
+
+
+
+        <img src="image/sig-o.png">
+    
+
+
+
+    </div>
+
+
+                 
+   
+                 
+                 
+                
+                 
+                  
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer class="footer-bottom">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-sm-6">
+                  <div  class="footer-logo-text">
+                     <img src="image/logo-foot.png" alt="footer-logo">
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6">
+                  <div class="main-3-section text-right">
+                     <ul>
+                        <li class="twitter-icon"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class="facebook-icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class="youtube-icon"><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li class="gmail-icon"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="clear-fix"></div>
+               <div class="col-md-12 col-sm-12">
+                  <hr class="hraing1">
+                  <div class="footer-bottom1  ">
+                     <p>© 2019 All rights reserved.<a href="#"> Sign-O-Text</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--jQuery-->
+      <script src="js/jquery.js"></script>
+       <!--Bootstrap-->
+      <script src="js/bootstrap.js"></script>
+       <!--wow js-->
+      <script src="js/wow.js"></script>
+       <!--Slick-->
+      <script src="js/slick.js"></script>
+       <!--Custom js-->
+      <script src="js/custom.js"></script>
+      <script>
+         'use strict';
+          $(".tab_content").hide();
+          $(".tab_content:first").show();
+         /* if in tab mode */
+        $("ul.banner-tabs li").on('click', function() {
+            $(".tab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#"+activeTab).fadeIn();
+            $("ul.banner-tabs li").removeClass("active");
+            $(this).addClass("active");
+          $(".tab_drawer_heading").removeClass("d_active");
+          $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+        });
+         /* if in drawer mode */
+         $(".tab_drawer_heading").on('click',function() {
+            $(".tab_content").hide();
+            var d_activeTab = $(this).attr("rel");
+            $("#"+d_activeTab).fadeIn();
+            $(".tab_drawer_heading").removeClass("d_active");
+            $(this).addClass("d_active");
+            $("ul.banner-tabs li").removeClass("active");
+            $("ul.banner-tabs li[rel^='"+d_activeTab+"']").addClass("active");
+        });
+         /* Extra class "tab_last"
+           to add border to right side
+           of last tab */
+         $('ul.banner-tabs li').last().addClass("tab_last");
+      </script>
+   </body>
+
+<!-- Mirrored from layerdrops.com/sooper/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jan 2019 17:51:16 GMT -->
+</html>

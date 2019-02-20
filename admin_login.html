@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from layerdrops.com/sooper/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jan 2019 17:51:08 GMT -->
+<head>
+      <title>Sign-O-Text</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- favicon-->
+      <link rel="icon" type="image/png" sizes="32x32" href="image/log.png">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+   
+      <script src="face.js"></script>
+   </head>
+   <body>
+      <header class="navigation main-navigation">
+         <nav class="navbar navbar-custom navbar-fixed-top">
+            <div class="container text-center">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <!-- <a class="navbar-brand" href="web-app.html"><img src="image/new_logo.png" alt="logo"></a> -->
+               </div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                  <h1 style="text-align:center; color:black; font-size: 50px; "><b>ADMIN-PANEL</b></h1>
+               </div>
+            </div>
+         </nav>
+        
+      </header>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     
+
+     
+      <section class="feature new-feature">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="heading text-center wow animated slideInUp">
+                     <!-- <h3 style="color:black !important ">Admin Login</h3> -->
+                     
+                  </div>
+      <form name="login" method="POST">          
+<div class="abc"  style="text-align:center">
+<div class="wow animated slideInUp">
+   <img src="image/sig-o.png">
+</div>
+   
+
+
+
+<br>
+<br>
+<input type="text" value="" placeholder="Name" name="username" class="input-box" style="height:15px; width: 250px; border-radius: 25px"  name="FNAME">
+  <br>
+<input type="password" value="" placeholder="Password" name="pass" class="input-box" style="height:15px; width: 250px; border-radius: 25px"  name="FNAME">
+      
+     <!-- <div class="contact-input">
+        <div class="mc-field-group">
+           <input type="password" value="" placeholder="Password" name="PASS"  class="form-control input-box" style="width:45%" id="mce-FNAME">
+        </div>
+     </div>
+     -->
+       
+
+</div>
+
+<div class="banner-btn" style="text-align:center">
+  
+               
+   <button class="btn btn-pink button6" onclick="check(this.form)">Admin Login</button>
+   
+</div>
+
+
+
+</form>
+
+    
+
+
+                 
+   
+                 
+                 
+                
+                 
+                  
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+     
+      <!--jQuery-->
+      <script src="js/jquery.js"></script>
+       <!--Bootstrap-->
+      <script src="js/bootstrap.js"></script>
+       <!--wow js-->
+      <script src="js/wow.js"></script>
+       <!--Slick-->
+      <script src="js/slick.js"></script>
+       <!--Custom js-->
+      <script src="js/custom.js"></script>
+<script>
+function check(form){
+   if(form.username.value =="admin" && form.pass.value =="123")
+   {
+       window.open('add_gesture.html')
+      
+   }
+   else{
+      alert("username and password incorrect")
+   }
+}
+
+
+</script>
+
+
+      <script>
+         'use strict';
+          $(".tab_content").hide();
+          $(".tab_content:first").show();
+         /* if in tab mode */
+        $("ul.banner-tabs li").on('click', function() {
+            $(".tab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#"+activeTab).fadeIn();
+            $("ul.banner-tabs li").removeClass("active");
+            $(this).addClass("active");
+          $(".tab_drawer_heading").removeClass("d_active");
+          $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+        });
+         /* if in drawer mode */
+         $(".tab_drawer_heading").on('click',function() {
+            $(".tab_content").hide();
+            var d_activeTab = $(this).attr("rel");
+            $("#"+d_activeTab).fadeIn();
+            $(".tab_drawer_heading").removeClass("d_active");
+            $(this).addClass("d_active");
+            $("ul.banner-tabs li").removeClass("active");
+            $("ul.banner-tabs li[rel^='"+d_activeTab+"']").addClass("active");
+        });
+         /* Extra class "tab_last"
+           to add border to right side
+           of last tab */
+         $('ul.banner-tabs li').last().addClass("tab_last");
+      </script>
+   </body>
+
+<!-- Mirrored from layerdrops.com/sooper/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jan 2019 17:51:16 GMT -->
+</html>
